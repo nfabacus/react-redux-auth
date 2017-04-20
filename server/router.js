@@ -10,7 +10,7 @@ module.exports = function(app) {
   //   res.send(['hello', 'world', 'friends']);
   // });
   app.get('/', requireAuth, function(req, res){
-    res.send({ "hi": "there"});
+    res.send({ message: 'Super secret code is abc123.'});
   });
 
   app.post('/signin', requireSignin, Authentication.signin);
